@@ -4,6 +4,7 @@ GEM
     backports (3.6.0)
     multi_json (1.8.4)
     nbayes (0.1.1)
+    newrelic_rpm (3.7.3.199)
     ngram (1.0.0)
     rack (1.5.2)
     rack-protection (1.5.2)
@@ -28,6 +29,7 @@ PLATFORMS
 
 DEPENDENCIES
   nbayes
+  newrelic_rpm
   ngram
   sinatra (~> 1.4.2)
   sinatra-contrib

@@ -5,6 +5,10 @@ require 'csv'
 require "sinatra/reloader" if development?
 require 'json'
 
+configure :production do
+  require 'newrelic_rpm'
+end
+
 configure do
   nbayes_s = NBayes::Base.new
   nbayes_c = NBayes::Base.new
