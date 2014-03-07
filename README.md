@@ -2,6 +2,11 @@ Name Classifier
 ===============
 This web application estimates country and sex from a person's name using baysian classification.
 
+The estimation is based on only about 10,000 names all over the world.
+If you really want more accurate classification, visit
+ [OnoMAP](http://www.onomap.org/) or
+ [Public Profiler](http://worldnames.publicprofiler.org/).
+
 
 License
 -------
