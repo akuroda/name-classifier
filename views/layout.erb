@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" media="screen, projection" />
+<style>
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 70px;
+}
+
+.tbl_s {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.footer {
+  height: 70px;
+  position: absolute;
+  width: 100%;
+  bottom: 0; 
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 0px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+}
+
+.footer p {
+  margin-bottom: 0;
+  color: #777;
+}
+
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/js/classifier.js"></script>
+</head>
+<body>
+
+<div class="navbar navbar-inverse" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Name Classifier</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="starter-template">
+    <%= yield %>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>Copyright (C) 2014 Akira Kuroda</p>
+    <p>Powered by <a href="https://www.ruby-lang.org/">Ruby</a>, <a href="http://www.sinatrarb.com/">Sinatra<a/>, <a href="https://github.com/oasic/nbayes">NBayes</a>, and <a href="http://getbootstrap.com/">Bootstrap</a></p>
+    <p><a href="https://github.com/akuroda/name-classifier">GitHub</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
