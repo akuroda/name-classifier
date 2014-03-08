@@ -38,6 +38,10 @@ get '/' do
   erb :index
 end
 
+get '/help' do
+  erb :help
+end
+
 get '/json' do
   firstname = params[:name].split(/,/)[1].strip.downcase
   fullname = params[:name].gsub(/,/, '').strip.downcase
