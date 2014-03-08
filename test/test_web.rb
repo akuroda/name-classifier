@@ -26,6 +26,7 @@ class ClassifierTest < MiniTest::Unit::TestCase
   def test_json
     get '/json?name=last,first'
     assert last_response.ok?
+    assert_includes last_response.content_type, 'application/json'
   end
 
   def test_json_error

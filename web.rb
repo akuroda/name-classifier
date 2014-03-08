@@ -56,5 +56,7 @@ get '/json' do
   # sort array by probability then convert to hash
   c_hash = Hash[*c.sort{|a, b| b[1] <=> a[1]}[0..4].flatten]
   data = { country: c_hash, sex: s}
+
+  content_type :json
   data.to_json
 end
