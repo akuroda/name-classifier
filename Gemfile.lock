@@ -25,11 +25,13 @@ GEM
     tilt (1.4.1)
 
 PLATFORMS
+  ruby
   x86-mswin32
 
 DEPENDENCIES
   nbayes
   newrelic_rpm
   ngram
+  rack-test
   sinatra (~> 1.4.2)
   sinatra-contrib

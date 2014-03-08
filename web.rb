@@ -46,6 +46,10 @@ get '/json' do
   firstname = params[:name].split(/,/)[1].strip.downcase
   fullname = params[:name].gsub(/,/, '').strip.downcase
   #puts "#{firstname}:#{fullname}"
+  if firstname.empty? or fullname.empty?
+    status 400
+  end
+
   s = settings.nbayes_s.classify(settings.ngram.parse(firstname).flatten)
   c = settings.nbayes_c.classify(settings.ngram.parse(fullname).flatten)
   #p settings.ngram.parse(fullname)

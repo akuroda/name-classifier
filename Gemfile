@@ -5,5 +5,6 @@ gem "ngram"
 gem "sinatra", "~> 1.4.2"
 gem 'newrelic_rpm'
 group :development do
+  gem "rack-test"
   gem "sinatra-contrib"
 end
