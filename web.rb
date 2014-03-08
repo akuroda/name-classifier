@@ -44,7 +44,7 @@ get '/json' do
   #puts "#{firstname}:#{fullname}"
   s = settings.nbayes_s.classify(settings.ngram.parse(firstname).flatten)
   c = settings.nbayes_c.classify(settings.ngram.parse(fullname).flatten)
-  p settings.ngram.parse(fullname)
+  #p settings.ngram.parse(fullname)
   # sort array by probability then convert to hash
   c_hash = Hash[*c.sort{|a, b| b[1] <=> a[1]}[0..4].flatten]
   data = { country: c_hash, sex: s}
