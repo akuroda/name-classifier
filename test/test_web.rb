@@ -27,6 +27,14 @@ class ClassifierTest < MiniTest::Unit::TestCase
     get '/json?name=last,first'
     assert last_response.ok?
     assert_includes last_response.content_type, 'application/json'
+
+    c = JSON.parse(last_response.body).fetch('country')
+    assert_kind_of Hash, c
+
+    s = JSON.parse(last_response.body).fetch('sex')
+    assert_kind_of Hash, s
+    assert s.fetch('M')
+    assert s.fetch('F')
   end
 
   def test_json_error
