@@ -45,16 +45,17 @@ end
 get '/json' do
   firstname = params[:name].split(/,/)[1].strip.downcase
   fullname = params[:name].gsub(/,/, '').strip.downcase
-  #puts "#{firstname}:#{fullname}"
   if firstname.empty? or fullname.empty?
     status 400
   end
 
   s = settings.nbayes_s.classify(settings.ngram.parse(firstname).flatten)
   c = settings.nbayes_c.classify(settings.ngram.parse(fullname).flatten)
-  #p settings.ngram.parse(fullname)
+  s.each { |k, v| s[k] = "%.3f" % v }
+
   # sort array by probability then convert to hash
   c_hash = Hash[*c.sort{|a, b| b[1] <=> a[1]}[0..4].flatten]
+  c_hash.each { |k, v| c_hash[k] = "%.7f" % v }
   data = { country: c_hash, sex: s}
 
   content_type :json
