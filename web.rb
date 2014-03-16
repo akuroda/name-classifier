@@ -28,7 +28,6 @@ get '/json' do
 
   data = { country: settings.classifier.classify_country(fullname),
     sex: settings.classifier.classify_sex(firstname) }
-  p data
 
   content_type :json
   data.to_json
