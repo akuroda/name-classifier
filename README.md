@@ -1,5 +1,7 @@
 Name Classifier
 ===============
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/akuroda/name-classifier)
+
 [![Build Status](https://drone.io/github.com/akuroda/name-classifier/status.png)](https://drone.io/github.com/akuroda/name-classifier/latest)
 
 This web application estimates country and sex from a person's name using baysian classification.

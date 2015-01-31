@@ -1,0 +1,5 @@
+{
+  "name": "Bayesian Name Classifier",
+  "description": "Estimate country and sex from a person's name based on the athlete data of London Olympic games.",
+  "repository": "https://github.com/akuroda/name-classifier"
+}
